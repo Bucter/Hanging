@@ -1,163 +1,121 @@
-## 关注 JeeSite 4.0 请移步: <https://gitee.com/thinkgem/jeesite4>
+## 引言
 
-# JeeSite 企业信息化快速开发平台
+JeeSite 是一个 Java EE 企业级快速开发平台，基于经典技术组合（Spring Boot、Spring MVC、Apache Shiro、MyBatis、Beetl、Bootstrap、AdminLTE）采用经典开发模式，让初学者能够更快的入门并投入到团队开发中去。在线代码生成功能，包括核心模块如：组织机构、角色用户、菜单及按钮授权、数据权限、系统参数、内容管理、工作流等。采用松耦合设计；界面无刷新，一键换肤；众多账号安全设置，密码策略；在线定时任务配置；支持集群，支持SAAS；支持多数据源；支持微服务。
 
-## 平台简介
+JeeSite 快速开发平台的主要目的是能够让初级的研发人员快速的开发出复杂的业务功能（经典架构会的人多），让开发者注重专注业务，其余有平台来封装技术细节，降低技术难度，从而节省人力成本，缩短项目周期，提高软件安全质量。
 
-JeeSite是基于多个优秀的开源项目，高度整合封装而成的高效，高性能，强安全性的**开源**Java EE快速开发平台。
+JeeSite 自 2013 年发布以来已被广大爱好者用到了企业、政府、医疗、金融、互联网等各个领域中，JeeSite 依架构简单精良、易于扩展、大众思维的设计模式，深入开发者的内心，并得到一致好评，于[2016](http://www.oschina.net/project/top_cn_2016?sort=1)和[2017](http://www.oschina.net/project/top_cn_2017?sort=1)连续两年获得开源中国《最受欢迎中国开源软件》奖杯，期间也帮助了不少刚毕业的大学生作为入门教材，快速的去实践。
 
-JeeSite是您快速完成项目的最佳基础平台解决方案，JeeSite是您想学习Java平台的最佳学习案例，JeeSite还是接私活的最佳助手。
+V4 的升级，作者结合了多年总结和经验，以及各方面的应用案例，对架构完成了一次全部重构，也纳入很多新的思想。不管是从开发者模式、底层架构、逻辑处理还是到用户界面，用户交互体验上都有很大的进步，在不忘学习成本、提高开发效率的情况下，安全方面也做和很多工作，包括：身份认证、密码策略、安全审计、日志收集。
 
-JeeSite是在Spring Framework基础上搭建的一个Java基础开发平台，以Spring MVC为模型视图控制器，MyBatis为数据访问层，
-Apache Shiro为权限授权层，Ehcahe对常用数据进行缓存，Activit为工作流引擎。是JavaEE界的最佳整合。
+### 4.x 新特性：<http://jeesite4.mydoc.io/?t=281645>
 
-JeeSite主要定位于企业信息化领域，已内置企业信息化系统的基础功能和高效的**代码生成**工具，
-包括：系统权限组件、数据权限组件、数据字典组件、核心工具组件、视图操作组件、工作流组件、代码生成等。
-前端界面风格采用了结构简单、性能优良、页面美观大气的Twitter Bootstrap页面展示框架。
-采用分层设计、双重验证、提交数据安全编码、密码加密、访问验证、数据权限验证。
-使用Maven做项目管理，提高项目的易开发性、扩展性。
-
-JeeSite目前包括以下四大模块，系统管理（SYS）模块、
-内容管理（CMS）模块、在线办公（OA）模块、代码生成（GEN）模块。 **系统管理模块** ，包括企业组织架构（用户管理、机构管理、区域管理）、
-菜单管理、角色权限管理、字典管理等功能； **内容管理模块** ，包括内容管理（文章、链接），栏目管理、站点管理、
-公共留言、文件管理、前端网站展示等功能； **在线办公模块** ，提供简单的请假流程实例；**代码生成模块** ，完成重复的工作。
-
-JeeSite 提供了常用工具进行封装，包括日志工具、缓存工具、服务器端验证、数据字典、当前组织机构数据
-（用户、机构、区域）以及其它常用小工具等。另外还提供一个强大的在线 **代码生成** 工具，
-此工具提供简单的单表、一对多、树结构功能的生成，如果对外观要求不是很高，生成的功能就可以用了。
-如果你使用了JeeSite基础框架，就可以很高效的快速开发出，优秀的信息管理系统。
-
-## 内置功能
-
-1.	用户管理：用户是系统操作者，该功能主要完成系统用户配置。
-2.	机构管理：配置系统组织机构（公司、部门、小组），树结构展现，可随意调整上下级。
-3.	区域管理：系统城市区域模型，如：国家、省市、地市、区县的维护。
-4.	菜单管理：配置系统菜单，操作权限，按钮权限标识等。
-5.	角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
-6.	字典管理：对系统中经常使用的一些较为固定的数据进行维护，如：是否、男女、类别、级别等。
-7.	操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
-8.	连接池监视：监视当期系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
-9.	工作流引擎：实现业务工单流转、在线流程设计器。
-
-## 为何选择JeeSite
-
-1. 使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议，源代码完全开源，无商业限制。
-2. 使用目前主流的Java EE开发框架，简单易学，学习成本低。
-3. 数据库无限制，目前支持MySql、Oracle，可扩充SQL Server、PostgreSQL、H2等。
-4. 模块化设计，层次结构清晰。内置一系列企业信息管理的基础功能。
-5. 操作权限控制精密细致，对所有管理链接都进行权限验证，可控制到按钮。
-6. 数据权限控制精密细致，对指定数据集权限进行过滤，七种数据权限可供选择。
-7. 提供在线功能代码生成工具，提高开发效率及质量。
-8. 提供常用工具类封装，日志、缓存、验证、字典、组织机构等，常用标签（taglib），获取当前组织机构、字典等数据。
-9. 兼容目前最流行浏览器（IE7+、Chrome、Firefox）IE6也支持，但体验效果差。
+* **我们的优势：** 整体架构清晰、稳定技术先进、入门简单、易于维护、易于扩展、安全稳定。
 
 ## 技术选型
 
-1、后端
+* 主框架：Spring Boot 2.0、Spring Framework 5.0、Apache Shiro 1.4、J2Cache
+* 持久层：Apache MyBatis 3.4、Hibernate Validation 6.0、Alibaba Druid 1.1
+* 视图层：Spring MVC 5.0、Beetl 2.7 替换JSP、Bootstrap 3.3、AdminLTE 2.4
+* 前端组件：jQuery 1.12、jqGrid 4.7、layer 3.0、zTree 3.5、jquery-validation
+* 工具组件：Apache Commons、Logback 1.1、Jackson 2.8、POI 3.14、Quartz 2.2
+* 技术选型详情：<http://jeesite4.mydoc.io/?t=273599>
 
-* 核心框架：Spring Framework 4.1
-* 安全框架：Apache Shiro 1.2
-* 视图框架：Spring MVC 4.1
-* 服务端验证：Hibernate Validator 5.2
-* 布局框架：SiteMesh 2.4
-* 工作流引擎：Activiti 5.21
-* 任务调度：Spring Task 4.1
-* 持久层框架：MyBatis 3.2
-* 数据库连接池：Alibaba Druid 1.0
-* 缓存框架：Ehcache 2.6、Redis
-* 日志管理：SLF4J 1.7、Log4j
-* 工具类：Apache Commons、Jackson 2.2、Xstream 1.4、Dozer 5.3、POI 3.9
+## 内置功能
 
-2、前端
+* <http://jeesite4.mydoc.io/?t=270187>
 
-* JS框架：jQuery 1.9。
-* CSS框架：Twitter Bootstrap 2.3.1（稳定是后台，UI方面根据需求自己升级改造吧）。
-* 客户端验证：JQuery Validation Plugin 1.11。
-* 富文本在线编辑：CKEditor
-* 在线文件管理：CKFinder
-* 动态页签：Jerichotab
-* 手机端框架：Jingle
-* 数据表格：jqGrid
-* 对话框：jQuery jBox
-* 下拉选择框：jQuery Select2
-* 树结构控件：jQuery zTree
-* 日期控件： My97DatePicker
+## 生态系统
 
-4、平台
-
-* 服务器中间件：在Java EE 5规范（Servlet 2.5、JSP 2.1）下开发，支持应用服务器中间件
-有Tomcat 6+、Jboss 7+、WebLogic 10+、WebSphere 8+。
-* 数据库支持：目前仅提供MySql和Oracle数据库的支持，但不限于数据库，平台留有其它数据库支持接口，
-你可以很方便的更改为其它数据库，如：SqlServer 2008、MySql 5.5、H2等
-* 开发环境：Java、Eclipse Java EE 4.3、Maven 3.1、Git
-
-## 安全考虑
-
-1. 开发语言：系统采用Java 语言开发，具有卓越的通用性、高效性、平台移植性和安全性。
-2. 分层设计：（数据库层，数据访问层，业务逻辑层，展示层）层次清楚，低耦合，各层必须通过接口才能接入并进行参数校验（如：在展示层不可直接操作数据库），保证数据操作的安全。
-3. 双重验证：用户表单提交双验证：包括服务器端验证及客户端验证，防止用户通过浏览器恶意修改（如不可写文本域、隐藏变量篡改、上传非法文件等），跳过客户端验证操作数据库。
-4. 安全编码：用户表单提交所有数据，在服务器端都进行安全编码，防止用户提交非法脚本及SQL注入获取敏感数据等，确保数据安全。
-5. 密码加密：登录用户密码进行SHA1散列加密，此加密方法是不可逆的。保证密文泄露后的安全问题。
-6. 强制访问：系统对所有管理端链接都进行用户身份权限验证，防止用户直接填写url进行访问。
+* 分布式微服务系统（Spring Cloud）：<https://gitee.com/thinkgem/jeesite4-cloud>
+* JFlow工作流引擎：<https://gitee.com/thinkgem/jeesite4-jflow> ：<http://ccflow.org>
+* 内容管理模块（CMS）：<https://gitee.com/thinkgem/jeesite4-cms>【敬请期待】
 
 ## 快速体验
 
-1. 具备运行环境：JDK1.6+、Maven3.0+、MySql5+或Oracle10g+。
-2. 修改src\main\resources\jeesite.properties文件中的数据库设置参数。
-3. 根据修改参数创建对应MySql或Oracle数据库用户和参数。
-4. 运行bin\init-db.bat脚本，即可导入表结构及演示数据(linux操作系统：在控制台中切换至项目根目录，运行命令：mvn antrun:run -Pinit-db)
-5. 运行bin\run-tomcat7.bat或bin\run-jetty.bat，启动Web服务器（第一次运行，需要下载依赖jar包，请耐心等待）。
-6. 最高管理员账号，用户名：thinkgem 密码：admin
+### 在线演示
 
-## 常见问题
+1. 地址：<http://demo.jeesite.com/>
+2. 账号：system
+3. 密码：admin
 
-1. 用一段时间提示内存溢出，请修改JVM参数：-Xmx512m -XX:MaxPermSize=256m
-2. 有时出现文字乱码：修改Tomcat的server.xml文件的Connector项，增加URIEncoding="UTF-8"
-3. 为什么新建菜单后看不到新建的菜单？因为授权问题，菜单管理只允许最高管理员账号管理（最高管理员默认账号：thinkgem 密码：admin）。
+### 本地运行
 
-## 更多文档
+1. 环境准备：`JDK 1.8`、`Maven 3.3`、`MySQL 5.7`
+2. 下载源码：<https://gitee.com/thinkgem/jeesite4/attach_files>
+3. 打开文件：/web`/src/main/resources/config/application.yml` 配置JDBC连接
+4. 执行脚本：/web`/bin/init-data.bat` 初始化数据库
+5. 执行脚本：/web`/bin/run-tomcat.bat` 启动服务即可
+6. 浏览器访问：<http://127.0.0.1:8980/js/>  账号 system 密码 admin
+7. 部署常见问题：<http://jeesite4.mydoc.io/?t=284210>
 
-* <https://github.com/thinkgem/jeesite/tree/master/doc>
+### 开发环境
 
-## 如何交流、反馈、参与贡献？
+1. 部署运行：<http://jeesite4.mydoc.io/?t=267354>
+2. 常见问题：<http://jeesite4.mydoc.io/?t=284210>
 
-* QQ 群号： `127515876`、`209330483`、`223507718`、`709534275`、`730390092`、`183903863(外包)`
-* GitHub：<https://github.com/thinkgem/jeesite>
-* 开源中国：<https://gitee.com/thinkgem/jeesite>
-* 官方网址：<http://jeesite.com>  论坛：<http://www.jeesite.net>
-* 支持JeeSite发展：（加我好友）支付宝：thinkgem@163.com &nbsp; 微信：thinkgem
+## 开发手册 
 
-一个人的个人能力再强，也无法战胜一个团队，希望兄弟姐妹的支持，能够贡献出自己的部分代码，参与进来共同完善它(^_^)。
+* 代码生成 / 快速入门 (Guide)：<http://jeesite4.mydoc.io/?t=316743>
+* 持久层 / 数据库操作 (MyBatis)：<http://jeesite4.mydoc.io/?t=267351>
+* 业务层 / 数据权限 (Service)：<http://jeesite4.mydoc.io/?t=267352>
+* 视图层 / 表单组件 (Beetl)：<http://jeesite4.mydoc.io/?t=267353>
+* 功能权限基础文档 (Shiro)：<http://jeesite4.mydoc.io/?t=298473>
+* 常用JS类库API (jeesite.js)：<http://jeesite4.mydoc.io/?t=301473>
+* 数据表格API (DataGrid.js)：<http://jeesite4.mydoc.io/?t=301488>
+* 修改 (默认) 视图，新增主题：<http://jeesite4.mydoc.io/?t=267355>
+* 手机 API 接口调用、前后分离：<http://jeesite4.mydoc.io/?t=270527>
+* 消息提醒中心使用手册：<http://jeesite4.mydoc.io/?t=323351>
+* 常见问题：<http://jeesite4.mydoc.io/?t=284210>
 
-怎么共享我的代码：[手把手教你如何加入到github的开源世界！](http://www.cnblogs.com/wenber/p/3630921.html)
+## 今后如何升级？
 
-## 版权声明
+尽量不修改web项目以外的源码项目，如 jeesite-common、jeesite-modele-core，如果修改了，请 Pull Requests 上来，否则代码编码将与官方不同步，将对你的日后升级带来困难。
 
-本软件使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议，请严格遵照协议内容：
+JeeSite的小版本（4.1.x）升级是非常便捷的，你只需要将 pom.xml 文件中的 parent.version 版本修改到最新版本即可，同版本下你可进行Maven快照强制更新，即可将最新版的依赖jar更新到本地，下面介绍一下在Eclipse里如何操作：
 
-1. 需要给代码的用户一份Apache Licence。
-2. 如果你修改了代码，需要在被修改的文件中说明。
-3. **在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。**
-4. 如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache Licence。你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。
-5. Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售
-6. 你可以二次包装出售，**但还请保留文件中的版权和作者信息**，并在你的产品说明中注明JeeSite。
-7. 你可以以任何方式获得，你可以修改包名或类名，**但还请保留文件中的版权和作者信息**。
+在web项目上右键，选择菜单 -> Maven -> Update Project...（或按Alt+F5） -> 点击 Select All 按钮 -> 选择 Force Update of Snapshots/Releases 复选框 -> 点击OK按钮即可。
 
-##为何使用MyBatis
+如果您修改了其它依赖模块代码，这时你需要与官方Git仓库代码进行同步。
 
-* 学习成本：Hibernate的真正掌握要比Mybatis来得难不少。Mybatis框架相对简单很容易上手，也更加灵活。
-对于学习过Hibernate的用户，学习起MyBatis也更容易上手。
+如果进行相对大的版本（4.x.x）升级这里我们会附加一个声明，帮助你进行迁移操作。
 
-* 开发成本：大家都说Hibernate开发效率高，个人认为MyBatis的开发效率并不比Hibernate低，
-通过代码生成器和封装开发效率不是问题，并且MyBatis可控性比较高，并更易于维护。
+## 授权协议声明
 
-* 性能方面：由于Hibernate比较难以掌握，性能方面也成为了Hibernate的问题瓶颈，当然如果你对Hibernate非常熟，
-Hibernate性能上定不是问题。但对于大多数情况下，真正掌握Hibernate的人少之又少，然而的也就造就了项目风险加大。
+1. 已开源的代码，授权协议采用 AGPL v3 + Apache Licence v2 进行发行。
+2. 您可以免费使用、修改和衍生代码，但不允许修改后和衍生的代码做为闭源软件发布。
+3. 修改后和衍生的代码必须也按照AGPL协议进行流通，对修改后和衍生的代码必须向社会公开。
+4. 如果您修改了代码，需要在被修改的文件中进行说明，并遵守代码格式规范，帮助他人更好的理解您的用意。
+5. 在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议、版权声明和其他原作者规定需要包含的说明（请尊重原作者的著作权，不要删除或修改文件中的`@author`信息）。
+6. 您可以应用于商业软件，但必须遵循以上条款原则（请协助改进本作品）。
+7. 关系平台的发展战略考虑，底层部分代码暂未开源，但这不影响您的二次开发。
+8. 请知悉社区版，用户数不可超过100个，最大允许10个用户同时在线（不含匿名）。
 
-* 多数据库支持：有些人说MyBatis对多数据库支持困难，我认为这个不是问题，虽说目前JeeSite仅提供对MySql或Oracle
-数据库的支持，但对于支持其它数据库的改动也不是很麻烦，SQL是被专门写在XML中，对于大多数SQL来说都是通用的，
-对于不同的数据库可通过dbName区分和修改各别的SQL片段即可。
+### 获得技术服务支持：<http://jeesite4.mydoc.io/?t=267685>
 
-上述纯属个人观点，欢迎指正（thinkgem@163.com）。
+* 随着JeeSite发展，我们也需要有相应的资金支持才能持续的开发和维护。支持我们，您可以得到一些回报，我们有了这些也会把开源事业做的更好，请给我们一些动力吧，谢谢您的支持！
 
-如果你仍然喜欢Hibernate，请点击[下载JeeSite Hibernate版本](https://github.com/thinkgem/jeesite/tree/master_hibernate)。
+# 技术交流方式
+
+* QQ 群号：`127515876`、`209330483`、`223507718`、`709534275`、`730390092`、`183903863(外包)`
+* 问题反馈：<https://gitee.com/thinkgem/jeesite4/issues> 　[【新手必读】](http://www.dianbo.org/9238/stone/tiwendezhihui.htm)
+* 码云Gitee：<https://gitee.com/thinkgem/jeesite4>
+* GitHub：<https://github.com/thinkgem/jeesite4>
+* 作者博客：<https://my.oschina.net/thinkgem>
+* 官方网站：<http://jeesite.com>
+* 官方论坛：<http://jeesite.net>
+* 微信公众号：
+
+![JeeSite4微信公众号](https://static.oschina.net/uploads/space/2018/0302/145133_OGZf_941661.jpg "JeeSite4微信公众号")
+
+# Git 全局设置技巧
+
+```
+1、提交检出均不转换换行符
+
+git config --global core.autocrlf false
+
+2、拒绝提交包含混合换行符的文件
+
+git config --global core.safecrlf true
+```
